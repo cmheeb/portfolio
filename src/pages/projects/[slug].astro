@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import { projects } from "../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+<Layout title={`${project.title} · Portfolio`}>
+  <Nav />
+  <div class="container">
+    <div class="detail-header">
+      <a class="detail-back" href="/#projects"><i class="ti ti-arrow-left"></i> Back to projects</a>
+      <div class="detail-area">{project.area}</div>
+      <h1 class="detail-title">{project.title}</h1>
+      <p class="detail-desc">{project.description}</p>
+      <div class="proj-tags">
+        {project.tags.map((tag) => (
+          <span class={`ptag ${project.color}`}>{tag}</span>
+        ))}
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="section detail-body">
+      {project.details.map((paragraph) => <p>{paragraph}</p>)}
+      {project.links && project.links.length > 0 && (
+        <div class="detail-links">
+          {project.links.map((link) => (
+            <a class="btn-g" href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+  <Footer />
+</Layout>

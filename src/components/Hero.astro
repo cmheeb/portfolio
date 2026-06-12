@@ -1,0 +1,24 @@
+---
+import { site } from "../data/site";
+---
+<section class="hero reveal">
+  <div>
+    <div class="hero-eyebrow">{site.eyebrow}</div>
+    <h1>
+      {site.heroHeadline.map((line) => <>{line}<br/></>)}
+      <em>{site.heroEmphasis}</em>
+    </h1>
+    <p class="hero-sub">{site.heroSub}</p>
+    <div class="btns">
+      <a class="btn-p" href="#projects">View projects</a>
+      <a class="btn-g" href={site.resumeUrl}>Download résumé</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- Photo placeholder: swap visibility:hidden for the <img> tag when ready -->
+    <!-- <div class="photo-frame">
+      <img src="your-photo.jpg" alt={site.name}>
+    </div> -->
+    <div class="hero-note" set:html={`<b>Open to roles in</b><br>${site.openTo}`} />
+  </div>
+</section>

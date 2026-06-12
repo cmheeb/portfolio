@@ -1,0 +1,22 @@
+---
+import { site, contactLinks } from "../data/site";
+---
+<section class="section reveal" id="contact">
+  <div class="sec-head">
+    <h2 class="sec-title">Get in touch</h2>
+  </div>
+  <div class="contact-grid">
+    <p class="contact-intro">"{site.quote}"</p>
+    <div class="contact-links">
+      {contactLinks.map((link) => (
+        <a class="cc" href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}>
+          <div class="cc-left">
+            <i class={`ti ${link.icon} cc-icon`}></i>
+            <div><div class="cc-label">{link.label}</div><div class="cc-sub">{link.sub}</div></div>
+          </div>
+          <i class="ti ti-arrow-up-right cc-arr"></i>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

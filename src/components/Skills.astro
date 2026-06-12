@@ -1,0 +1,21 @@
+---
+import { skills } from "../data/skills";
+---
+<section class="section reveal" id="skills">
+  <div class="sec-head">
+    <h2 class="sec-title">Technical skills</h2>
+  </div>
+  <div class="skill-grid">
+    {skills.map((group) => (
+      <div class="sk">
+        <div class="sk-area">{group.area}</div>
+        <div class="sk-name">{group.name}</div>
+        <div class="tags">
+          {group.tags.map((tag) => (
+            <span class={`tag ${tag.color}`}>{tag.label}</span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

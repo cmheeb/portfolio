@@ -1,0 +1,25 @@
+---
+import { projects } from "../data/projects";
+---
+<section class="section reveal" id="projects">
+  <div class="sec-head">
+    <h2 class="sec-title">Featured projects</h2>
+  </div>
+  <div class="proj-list">
+    {projects.map((project) => (
+      <a class="proj" href={`/projects/${project.slug}/`}>
+        <div>
+          <div class="proj-area">{project.area}</div>
+          <div class="proj-title">{project.title}</div>
+          <div class="proj-desc">{project.description}</div>
+          <div class="proj-tags">
+            {project.tags.map((tag) => (
+              <span class={`ptag ${project.color}`}>{tag}</span>
+            ))}
+          </div>
+        </div>
+        <div class={`proj-arr ${project.color}`}><i class="ti ti-arrow-up-right"></i></div>
+      </a>
+    ))}
+  </div>
+</section>
