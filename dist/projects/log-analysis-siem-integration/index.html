@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.4.4"><title>Log Analysis &amp; SIEM Integration · Portfolio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"><link rel="stylesheet" href="/_astro/projects.CwEiOk7E.css"></head> <body>  <nav> <a class="nav-logo" href="/">Collin Heeb</a> <div class="nav-links"> <a href="/#skills">Skills</a> <a href="/#projects">Projects</a> <a href="/#contact">Contact</a> </div> </nav> <div class="container"> <div class="detail-header"> <a class="detail-back" href="/#projects"><i class="ti ti-arrow-left"></i> Back to projects</a> <div class="detail-area">SOC · SIEM · Python · Linux</div> <h1 class="detail-title">Log Analysis &amp; SIEM Integration</h1> <p class="detail-desc">Automated log ingestion and alerting workflows integrated with SIEM tooling to reduce analyst triage time and surface high-priority events.</p> <div class="proj-tags"> <span class="ptag b">SIEM</span><span class="ptag b">Python</span><span class="ptag b">automation</span><span class="ptag b">Linux</span> </div> </div> <hr class="divider"> <div class="section detail-body"> <p>Built ingestion and normalization pipelines that bring logs from disparate sources into a consistent format for SIEM correlation rules.</p><p>Wrote automation that pre-triages incoming events by severity and known patterns, cutting down the volume an analyst has to manually review.</p><p>Deployed and tuned on Linux infrastructure with an emphasis on reliability — the pipeline keeps running and keeps surfacing the events that matter.</p> <div class="detail-links"> <a class="btn-g" href="https://github.com/yourname/log-analysis-siem" target="_blank" rel="noopener noreferrer">View on GitHub</a> </div> </div> </div> <footer> <span class="foot-l">Collin Heeb, 2026</span> <span class="foot-r">cybersecurity · software engineering · data science</span> </footer>  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var els = document.querySelectorAll('.reveal');
+    els.forEach(function (el) { el.classList.add('reveal-ready'); });
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          setTimeout(function () {
+            entry.target.classList.add('visible');
+          }, 30);
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+    els.forEach(function (el) { observer.observe(el); });
+  });
+</script> </body> </html>

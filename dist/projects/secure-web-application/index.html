@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.4.4"><title>Secure Web Application · Portfolio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"><link rel="stylesheet" href="/_astro/projects.CwEiOk7E.css"></head> <body>  <nav> <a class="nav-logo" href="/">Collin Heeb</a> <div class="nav-links"> <a href="/#skills">Skills</a> <a href="/#projects">Projects</a> <a href="/#contact">Contact</a> </div> </nav> <div class="container"> <div class="detail-header"> <a class="detail-back" href="/#projects"><i class="ti ti-arrow-left"></i> Back to projects</a> <div class="detail-area">FULL-STACK · Security-focused</div> <h1 class="detail-title">Secure Web Application</h1> <p class="detail-desc">Full-stack application built with security-first principles — input validation, auth hardening, and monitoring instrumentation throughout the stack.</p> <div class="proj-tags"> <span class="ptag a">full-stack</span><span class="ptag a">secure auth</span><span class="ptag a">C++</span><span class="ptag a">monitoring</span> </div> </div> <hr class="divider"> <div class="section detail-body"> <p>Designed and built a full-stack application where security was a first-class concern from day one rather than a layer bolted on afterward.</p><p>Implemented strict input validation at every boundary, hardened authentication flows, and added monitoring instrumentation so unusual behavior is visible immediately.</p><p>Performance-sensitive components were written in C++ to keep the security checks from becoming a bottleneck.</p> <div class="detail-links"> <a class="btn-g" href="https://github.com/yourname/secure-web-app" target="_blank" rel="noopener noreferrer">View on GitHub</a> </div> </div> </div> <footer> <span class="foot-l">Collin Heeb, 2026</span> <span class="foot-r">cybersecurity · software engineering · data science</span> </footer>  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var els = document.querySelectorAll('.reveal');
+    els.forEach(function (el) { el.classList.add('reveal-ready'); });
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          setTimeout(function () {
+            entry.target.classList.add('visible');
+          }, 30);
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+    els.forEach(function (el) { observer.observe(el); });
+  });
+</script> </body> </html>
